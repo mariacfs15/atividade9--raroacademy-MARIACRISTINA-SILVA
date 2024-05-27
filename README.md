@@ -7,7 +7,11 @@ Enunciado
 
 ● Esta atividade será realizada no aplicativo Nubank Clone 
 
-1. Crie um repositório no Github chamado atividade9-raroacademy-SEUNOME 2. Crie seu projeto de automação seguindo o'que foi passado nas aulas 3. Implemente validações no Nubank Clone tais como: 
+1. Crie um repositório no Github chamado atividade9-raroacademy-SEUNOME
+   
+3. Crie seu projeto de automação seguindo o'que foi passado nas aulas
+
+3. Implemente validações no Nubank Clone tais como: 
 - Validar todos os atalhos do menu carrossel da homepage e botoes 
 - Validar o saldo e o histórico da conta e os botões disponíveis na tela 
 - Validar a tela de depósito e seus botões 
