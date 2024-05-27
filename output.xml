@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-27T15:30:12.699938" rpa="false" schemaversion="5">
+<suite id="s1" name="CartaoTest" source="c:\Users\Maria\Desktop\atividade9- raroacademy-MARIACRISTINA-SILVA\android\features\CartaoTest.robot">
+<test id="s1-t1" name="CT001 - Deve ser possível visualizar o valor da fatura atual" line="10">
+<kw name="Abrir App" owner="config" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://127.0.0.1:4723</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>appActivity=${ANDROID_APP_ACTIVITY}</arg>
+<arg>appPackage=${ANDROID_APP_PACKAGE}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-05-27T15:30:13.135070" elapsed="10.752947"/>
+</kw>
+<status status="PASS" start="2024-05-27T15:30:13.134068" elapsed="10.754951"/>
+</kw>
+<kw name="Dado que o usuário está na página inicial do App" owner="CartaoPage">
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2024-05-27T15:30:25.605009" level="INFO">xpath criteria: //android.view.View[@content-desc="Olá, Breno Freitas"]</msg>
+<arg>${BOAS_VINDAS}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2024-05-27T15:30:23.892015" elapsed="1.712994"/>
+</kw>
+<status status="PASS" start="2024-05-27T15:30:23.890016" elapsed="1.725081"/>
+</kw>
+<kw name="Quando clicar na aba &quot;Cartão de Crédito&quot;" owner="CartaoPage">
+<kw name="Swipe By Percent" owner="AppiumLibrary">
+<arg>50</arg>
+<arg>50</arg>
+<arg>50</arg>
+<arg>-0.01</arg>
+<doc>Swipe from one percent of the screen to another percent, for an optional duration.
+Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<status status="PASS" start="2024-05-27T15:30:25.615097" elapsed="1.460064"/>
+</kw>
+<kw name="Espera o elemento e faz o clique" owner="commons">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-05-27T15:30:29.574778" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,'Cartão de Crédito')]</msg>
+<arg>${elemento}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-05-27T15:30:27.079178" elapsed="2.495600"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-05-27T15:30:29.584815" level="INFO">Clicking element 'xpath=//android.view.View[contains(@content-desc,'Cartão de Crédito')]'.</msg>
+<msg time="2024-05-27T15:30:30.744844" level="INFO">xpath criteria: //android.view.View[contains(@content-desc,'Cartão de Crédito')]</msg>
+<arg>${elemento}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-05-27T15:30:29.574778" elapsed="1.170066"/>
+</kw>
+<arg>${CARTAOCREDITO}</arg>
+<status status="PASS" start="2024-05-27T15:30:27.075161" elapsed="3.669683"/>
+</kw>
+<status status="PASS" start="2024-05-27T15:30:25.615097" elapsed="5.129747"/>
+</kw>
+<kw name="Então deve ser possível visualizar o valor da fatura atual" owner="CartaoPage">
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>Fatura atual</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-27T15:30:30.755093" elapsed="0.260073"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>R$ 780,72</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-05-27T15:30:31.015166" elapsed="0.220018"/>
+</kw>
+<status status="PASS" start="2024-05-27T15:30:30.744844" elapsed="0.490340"/>
+</kw>
+<kw name="Teardown" owner="config" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2024-05-27T15:30:31.245113" elapsed="0.000000"/>
+</kw>
+<kw name="Close All Applications" owner="AppiumLibrary">
+<doc>Closes all open applications.</doc>
+<status status="PASS" start="2024-05-27T15:30:31.250123" elapsed="0.614969"/>
+</kw>
+<status status="PASS" start="2024-05-27T15:30:31.245113" elapsed="0.619979"/>
+</kw>
+<status status="PASS" start="2024-05-27T15:30:13.131974" elapsed="18.733118"/>
+</test>
+<status status="PASS" start="2024-05-27T15:30:12.715477" elapsed="19.159568"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="CartaoTest">CartaoTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
