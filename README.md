@@ -17,4 +17,5 @@ Enunciado
 4. Conforme falado em sala de aula, os testes seguirão o padrão do curso, as keywords de teste devem estar no padrão BDD
    
 OBS: Todo conteúdo que foi passado em sala de aula, é o suficiente para realizar essa atividade 
+
 OBS²: Utilizar o formato de PageObjects.
