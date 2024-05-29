@@ -27,7 +27,7 @@ Então deve ser possível visualizar o botão "Entenda como funciona"
     Wait Until Page Contains        Entenda como funciona
     Element Should Be Enabled       ${FUNCIONA}
     
-Então deve ser possível visualizar o botão "Novo Empréstimo"
+Então deve ser possível solicitar um "Novo Empréstimo"
     Wait Until Page Contains            NOVO EMPRÉSTIMO
     Element Should Be Disabled          ${NOVOEMPRESTIMO}
 

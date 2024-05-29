@@ -29,6 +29,9 @@ ${EMPRESTIMO_INFO}      xpath=//android.view.View[@content-desc="Empréstimo Val
 ${INVESTIMENTOS}        xpath=//android.view.View[@content-desc="Conhecer"]
 ${INDICACAO}            xpath=//android.widget.Button[@content-desc="INDICAR AMIGOS"]
 
+${INPUTVALOR}          xpath=//android.widget.EditText[@text="R$ 0,00"]
+${INPUTCELULAR}         xpath=//android.widget.EditText
+
 
 *** Keywords ***
 Dado que o cliente está na página inicial do App
@@ -66,6 +69,7 @@ Quando clicar em TRANSFERIR
 
 Então deve ser possível inserir o valor da transferência a ser realizada 
     Wait Until Page Contains    Qual é o valor da transferência?
+    Input Text    ${INPUTVALOR}     R$ 30,00
 
 Quando clicar em DEPOSITAR 
     Espera o elemento e faz o clique    ${DEPOSITO}    
@@ -83,7 +87,7 @@ Quando clicar em EMPRÉSTIMOS
 
 Então deve ser possível visualizar as informações de empréstimos disponíveis
     Wait Until Page Contains        O valor disponível no momento é de R$ 10.000,00
-     Wait Until Page Contains       Este valor pode mudar diariamente devido à nossa análise de crédito.
+    Wait Until Page Contains       Este valor pode mudar diariamente devido à nossa análise de crédito.
 
 Quando clicar em RECARGA
     Swipe By Percent    50    50    -15    50
@@ -91,14 +95,19 @@ Quando clicar em RECARGA
 
 Então deve ser possível inserir o número de celular para realizar a Recarga
     Wait Until Page Contains    Qual número você quer recarregar?
+    Input Text    ${INPUTCELULAR}    31994111769    
 
 Quando clicar em COBRAR 
     Swipe By Percent    50    50    -15    50
     Espera o elemento e faz o clique    ${COBRAR} 
 
 Então deve ser possível inserir o valor a ser cobrado
-     Wait Until Page Contains    Qual valor você quer receber?
-     Wait Until Page Contains    Não especificar um valor
+    Wait Until Page Contains    Qual valor você quer receber?
+    Wait Until Page Contains    Não especificar um valor
+    Input Text    ${INPUTVALOR}     R$ 30,00
+
+Então deve ser possível fazer uma cobrança sem especificar o valor
+    Wait Until Page Contains    Não especificar um valor
 
 Quando rolar a tela para a direita
     Swipe By Percent    50    50    -15    50

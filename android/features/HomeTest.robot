@@ -32,12 +32,12 @@ CT005 - Deve ser possível realizar uma Transferência
     Quando clicar em TRANSFERIR 
     Então deve ser possível inserir o valor da transferência a ser realizada 
 
-CT006 - Deve ser possível realizar um Depósito
+CT006 - Deve ser possível visualizar os tipo de Depósitos disponíveis
     Dado que o cliente está na página inicial do App
     Quando clicar em DEPOSITAR 
     Então deve ser possível visualizar as opções de depósitos disponíveis
 
-CT007 - Deve ser possível realizar um Empréstimo
+CT007 - Deve ser possível visualizar as informações de Empréstimo
     Dado que o cliente está na página inicial do App
     Quando clicar em EMPRÉSTIMOS 
     Então deve ser possível visualizar as informações de empréstimos disponíveis
@@ -47,10 +47,15 @@ CT008 - Deve ser possível realizar uma Recarga
     Quando clicar em RECARGA  
     Então deve ser possível inserir o número de celular para realizar a Recarga
 
-CT009 - Deve ser possível realizar uma Cobrança
+CT009 - Deve ser possível realizar uma Cobrança especificando um valor
     Dado que o cliente está na página inicial do App
     Quando clicar em COBRAR 
     Então deve ser possível inserir o valor a ser cobrado
+
+CT009 - Deve ser possível realizar uma Cobrança sem especificar o valor
+    Dado que o cliente está na página inicial do App
+    Quando clicar em COBRAR 
+    Então deve ser possível fazer uma cobrança sem especificar o valor
 
 CT010 - Deve ser possível visualizar atalhos de Doação e Encontrar Atalhos
     Dado que o cliente está na página inicial do App
