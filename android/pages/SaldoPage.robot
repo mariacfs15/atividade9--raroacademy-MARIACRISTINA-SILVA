@@ -15,7 +15,6 @@ ${COBRARS01}             xpath=//android.widget.ScrollView/android.widget.Horizo
 ${DUVIDA}                xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.Button[2]
 
 ${INPUTVAL}              xpath=//android.widget.EditText[@text="R$ 0,00"]
-${INPUTCEL}              xpath=//android.widget.EditText
 
 *** Keywords ***
 
