@@ -30,7 +30,7 @@ ${INVESTIMENTOS}        xpath=//android.view.View[@content-desc="Conhecer"]
 ${INDICACAO}            xpath=//android.widget.Button[@content-desc="INDICAR AMIGOS"]
 
 ${INPUTVALOR}          xpath=//android.widget.EditText[@text="R$ 0,00"]
-${INPUTCELULAR}         xpath=//android.widget.EditText
+${INPUTCELULAR}        xpath=//android.widget.EditText
 
 
 *** Keywords ***

@@ -14,6 +14,9 @@ ${EMPRESTIMOS01}         xpath=//android.widget.ScrollView/android.widget.Horizo
 ${COBRARS01}             xpath=//android.widget.ScrollView/android.widget.HorizontalScrollView[1]/android.widget.Button[5]
 ${DUVIDA}                xpath=//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.Button[2]
 
+${INPUTVAL}              xpath=//android.widget.EditText[@text="R$ 0,00"]
+${INPUTCEL}              xpath=//android.widget.EditText
+
 *** Keywords ***
 
 Dado que o cliente está na página inicial do Aplicativo
@@ -57,6 +60,7 @@ E selecionar a opção "Tranferir"
 
 Então deve ser possível inserir o valor da transferência
     Wait Until Page Contains    Qual é o valor da transferência?
+    Input Text    ${INPUTVAL}     R$ 30,00
 
 E selecionar a opção "Empréstimos"
     Espera o elemento e faz o clique    ${EMPRESTIMOS01} 
@@ -67,10 +71,11 @@ Então deve ser possível visualizar as informações de empréstimos
 E selecionar a opção "Cobrar" 
     Swipe By Percent                    50    50    -20    50
     Espera o elemento e faz o clique    ${COBRARS01}
-
+    
 Então deve ser possível inserir o valor da cobrança
     Wait Until Page Contains    Qual valor você quer receber?
-
+    Input Text    ${INPUTVALOR}     R$ 30,00
+    
 Então deve ser possível visualizar o histórico de transações da conta 
     Wait Until Page Contains    Histórico
 
