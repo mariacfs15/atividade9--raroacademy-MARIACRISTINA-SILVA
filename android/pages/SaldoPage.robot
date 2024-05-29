@@ -74,7 +74,7 @@ E selecionar a opção "Cobrar"
     
 Então deve ser possível inserir o valor da cobrança
     Wait Until Page Contains    Qual valor você quer receber?
-    Input Text    ${INPUTVALOR}     R$ 30,00
+    Input Text    ${INPUTVAL}     R$ 30,00
     
 Então deve ser possível visualizar o histórico de transações da conta 
     Wait Until Page Contains    Histórico
